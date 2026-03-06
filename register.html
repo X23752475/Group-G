@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>FlexiFit Gym Registration</title>
+
+    <!-- Link to the external CSS file used for styling the page -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>FlexiFit Gym</h1>
+
+      <h2>Membership Registration</h2>
+
+      <!-- Card-style container used to visually group the form -->
+      <div class="plan-card">
+        <!-- Registration form for new gym members -->
+        <form id="memberForm">
+          <input type="text" id="firstName" placeholder="First Name" required />
+
+          <input type="text" id="lastName" placeholder="Last Name" required />
+
+          <input type="email" id="email" placeholder="Email" required />
+
+          <input type="date" id="dateOfBirth" required />
+
+          <input type="text" id="address" placeholder="Address" required />
+
+          <input type="hidden" id="membershipType" />
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="register.js"></script>
+  </body>
+</html>
