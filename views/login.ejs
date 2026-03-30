@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| <%= title %>
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+     <%- include('partials/head.ejs', { showAppName: true, showApp:true}) %>
+  <div class="register-container">
+
+  <h1></h1>
+  <p>
+    To access your account, please log in below:</p>
+  <form action="/login" method="POST" autocomplete="off">
+  
+    
+    <input type="email" name="email" placeholder = "Email" required value="<%= typeof email !== 'undefined' ? email : '' %>" autocomplete="off">
+   
+    <input type="password" name="password" placeholder = "Password" required autocomplete="new-password">
+    <% if (error && error.length > 0) { %>
+      <p style="color:red;"><%= error %></p>
+    <% } %>
+    <button type = "submit">Login</button>
+  </form>
+
+
+  <p>Don't have an account? <a href="/register">Register here</a></p>
+  </div>
+</body>
+
+</html>
